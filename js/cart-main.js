@@ -1,37 +1,77 @@
-let diCartscard = document.querySelector(".cart3lar-div")
+let diCartscard = document.getElementById("homecardsni")
+let diCartscart = JSON.parse(localStorage.getItem("card") || "[]")
+console.log(diCartscart);
+
 
 let badge = document.getElementById("badge")
-let card = JSON.parse(localStorage.getItem("card")  || "[]")
-badge.textContent = card.length
-console.log(card);
-function showCards(content , data){
-    data.map((el)=>{
-        content.innerHTML+=`
-          <div class="cart3lar-div">
-                            <div class="cart3lar-div-1">
-                                <div class="card3lar_img">
-                                    <button class="cartlar4"></button>
-                                    <img class="cart3lar-img" src="../paka/image (5).png" alt="maxsulodlar">
-                                </div>
-                                <div class="cart4lar">
-                                    <p class="cart3lar-p">${el.description}</p>
-                                    <h1 class="cart3lar-h1">${el.parse} ₽ зашт.</h1>
-                                </div>
-                            </div>
-                            <div class="cart5">
-                                <div class="buttoncard">
-                                    <button class="btncard1">-</button>
-                                    <span>0</span>
-                                    <button class="btncard2">+</button>
-                                </div>
-                                <div class="cart6">
-                                    <p class="cart3lar-p">222 ₽</p>
-                                    <s class="cart3lar-s">11,00 ₽</s>
-                                </div>
-                            </div>
-                        </div>
-        `
+localStorage.setItem("card", JSON.stringify(diCartscart))
+
+badge.textContent = diCartscart.length
+
+function showcards(content, data) {
+    content.innerHTML = "";
+    data.map((product) => {
+        content.innerHTML += `
+              <div class="aksiy2">
+              <div class="h-[100px]">
+                  <img class="aksiy2-img" src="${product.images[0]}" alt="${product.name}">
+                  <p class="aksiyo-p">${product.discount}%</p>
+                <img class="like-img" src="../paka/Button (4).png" alt="layk">
+              </div>
+  
+              <div class="aksiy3">
+                <div class="aksiy4">
+                  <h1 class="aksiy4-h1">${product.price} ₽</h1>
+                  <h2 class="aksiy4-h2">С картой</h2>
+                </div>
+                <div class="aksiy4">
+                  <h1 class="aksiy4-h1">${product.price - 10} ₽</h1>
+                  <h2 class="aksiy4-h2">Обычная</h2>
+                </div>
+             </div>
+              <p class="aksiy1-p">${product.description}</p>
+              <img class="aksiy1-img1" src="../assets/images/general/rating (1).png" alt="yulduzcha">
+              ${diCartscart.find((el) => el.id === product.id) ?
+                `  <div class="buttoncard">
+              <button onClick="decreaseQuatity(${product.id})" class="btncard1">-</button>
+              <span>${diCartscart.find((el) => el.id === product.id).qty}</span>
+              <button onClick="increaseQuatity(${product.id})" class="btncard2">+</button>
+              </div>` :
+                `<button onClick="addToCart(${product.id})"
+                class="aksiy1-button" >В корзину</button>`
+            }
+               </div>
+      `
     })
+}
+showcards(diCartscard , diCartscart);
+function addToCart(id) {
+    let item = products.find((el) => el.id === id);
+    item.qty = 1
+  diCartscart.push(item)
+    badge.textContent =diCartscart.length
+    showcards(diCartscard, diCartscart);
 
 }
-showCards(diCartscard , card)
+
+function increaseQuatity(id) {
+    let item =diCartscart.find((el) => el.id === id)
+    item.qty += 1
+    localStorage.setItem("card", JSON.stringify(diCartscart))
+    showcards(diCartscard, diCartscart);
+
+}
+
+function decreaseQuatity(id) {
+    let item = diCartscart.find((el) => el.id === id)
+    item.qty -= 1
+
+    if (item.qty <= 0) {
+       diCartscard= diCartscart.filter((el) => el.id !== id)
+    }
+    badge.textContent =diCartscart.length
+  localStorage.setItem("card", JSON.stringify(diCartscart))
+
+    showcards(diCartscard, diCartscart);
+
+  }
