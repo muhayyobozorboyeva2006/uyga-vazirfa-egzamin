@@ -67,7 +67,7 @@ margin-bottom: 10px;}
     border-radius: 5px;
    max-width: 900px;
     height: 90px;
-    background-color:#FFFFFF ;
+    background-color: #FFFFFF;
     padding: 10px;
     gap: 20px;
 }
@@ -118,6 +118,38 @@ margin-bottom: 10px;}
     font-size: 16px;
     line-height: 150%;
     color: #414141;
+}
+.cart7_6-btn{
+    background-color: #D80000;
+    border: solid #D80000;
+    border-radius: 5px;
+    max-width: 260px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+padding-top: 5px;
+margin-top: 10px;
+margin-left: 27px;
+}
+.cart7_6-btn1{
+    background-color: #FCD5BA;
+        border: solid #FCD5BA;
+        border-radius: 5px;
+        max-width: 320px;
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #FF6633;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        padding-top: 10px;
 }
 .cart7_2{
     /* display: flex;
@@ -178,86 +210,79 @@ margin-bottom: 10px;}
     flex-direction: column; 
     /* align-items: center; */
 }
-.cart7_6-btn{
-    margin-top: 24px;
-    color: white;
-    background-color: #D80000;
-    max-width: 300px;
-    height: 25px;
-    border: solid #D80000;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-    border-radius: 3px;
-    cursor: pointer;
-    margin-left: 60px;
-}
-.cart7_6-btn1{
-    margin-top: 20px;
-    background-color:#FCD5BA ;
-    color:#FF6633 ;
-    font-size: 24px;
-    line-height: 150%;
-    padding: 10px;
-    max-width: 400px;
-    height: 60px;
-    border: solid #FCD5BA ;
-    padding-left: 20px;
-    padding-right: 20px;
-    cursor: pointer;
-    margin-left: 40px;
-}
-@media (max-width:940px) {
-    .cart3lar-div{
-        display: flex;
-     flex-direction: column;
-     height: 190px;
-    }
-    .cart3lar-div-1{
-        gap: 100px;
-    }
 
+.cardlarimg{
+    width: 80px;
+    height: 50px;
+    position: absolute;
 }
-@media (max-width:500px) {
-    .cart3lar-div {
-            display: flex;
-            flex-direction: column;
-            height: 290px;
-        }
-    .cart3lar-div-1{
+.cardlar9{
+    position: relative;
+    top: 32px;
+    background-color: #FF6633;
+    width: 46px;
+    height: 23px;
+    border:#FF6633 ;
+    border-radius: 4px;
+    color: white;
+    margin-left: 40px;
+    text-align: center;
+}
+.check{
+    position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 20;
+        width: 16px;
+        height: 16px;
+        cursor: pointer
+}
+.cardlar1{
+    position: relative;
+    display:flex;
+    gap: 30px;
+    background-color: white;
+    border-radius: 5px;
+        max-width: 600px;
+        height: 90px;
+        background-color: #FFFFFF;
+        padding: 10px;
+        justify-content: space-between;
+        margin-bottom: 10px;
+}
+.cardalar10{
+    gap: 20px;
+}
+.cardlar2p{
+    font-size: 10px;
+    line-height: 150%;
+    color: #414141;
+}
+
+.cardlar4{
+    margin-left: 70px;
+}
+.cardlarbirlashma{
+    display: grid;
+    grid-template-columns: repeat(2 , auto);
+}
+.cardlar20{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+@media (max-width:830px) {
+    .cardlarbirlashma{
         display: flex;
         flex-direction: column;
-        align-items: center;        
+        align-items: center;
     }
-    .card3lar_img{
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-    .cart3lar-div{
-        position: relative;
-    }
-        
-    .cart4lar{
-      margin-top: 70px;
-        }
-        .cart5 {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-        }
-        .cart6{
-            display: flex;
-            gap: 10px;
-        }
 }
-@media (max-width:420px) {
-    .cart7_6-btn{
-        height: 45px;
-
-    } 
-    .cart7_6-btn1{
-        height: 80px;
+@media (max-width:480px) {
+    .cardlar1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+        height: 240px;
     }
 }
