@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -55,10 +54,11 @@
       </ul>
    
       <div id="profilBtn" class="card4 ">
-        <img class="card4-img" src="../paka/avatar (5).png" alt="odam">
+        <img id="profile-image" class="card4-img" src="../paka/avatar (5).png" alt="odam">
         <p class="card4-p ">Алексей</p>
-        <img src="../paka/Button (1).png" alt="Button">
       </div>
+      <img src="../paka/Button (1).png" alt="Button">
+
     </div>
   </header>
   <div id="cards" class="container cards">
@@ -109,6 +109,7 @@
             </div>
       
       </div>
+      <a href=""></a>
     
     </section>
     <section id="aksiyy">
@@ -302,16 +303,19 @@
   <div id="profilOyna"  class=" parol5">
     <div   class="parol2">
       <span class="closeBtn" id="yopishX">&times;</span>
-      <h1 class="malutlar">Iltimos dasturga kirish uchun aytilgan narsalarni kirting</h1>
+      <h1 id="form" class="malutlar">Profil</h1>
       <form id="forminput" class="parol">
-        <input class="parol1"  id="ism"  placeholder="email" type="text">
-        <input class="parol1" id="email" placeholder="parol" type="password">
+        <input class="parol1" id="pholo" placeholder="Photo" type="text">
+        <input class="parol1"  id="ism"  placeholder="Nema" type="text">
+        <input class="parol1" id="email" placeholder="Parol" type="password">
         </form>
         <button class="parol3" id="jonatishBtn">Jonatish</button>
         <div class="error" id="xatoMatni"></div>
 
     </div>
   </div>
+  <div id="profilInfo" class="profil-info"></div>
+
   <script src="./products-data/products-data.js"></script>
   <script src="./js/bubling-caturing.js"></script>
   <script src="./js/cards.js"></script>

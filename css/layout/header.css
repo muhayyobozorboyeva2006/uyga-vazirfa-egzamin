@@ -87,6 +87,11 @@ font-size: 12px;
     align-items: center;
     cursor: pointer;
 }
+.card4-img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+}
 .card4-p{
     font-size:16px ;
     color:#232323 ;

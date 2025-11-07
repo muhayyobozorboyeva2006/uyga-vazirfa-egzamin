@@ -7,9 +7,9 @@ sliceProductsMain.map((el) => {
   console.log(el);
   
     homeCards.innerHTML +=`
-                  <a href="../imges/tavar1440.html?id=${el.id}" class="aksiy2">
+                  <a href="../imges/tavar1440.html?id=${el.id}"   class="aksiy2">
             <div class="h-[100px]">
-                <img class="aksiy2-img" src="${el.images[0]}" alt="${el.name}">
+              <img class="aksiy2-img" src="${el.images[0]}" alt="${el.name}">
                 <p class="aksiyo-p">${el.discount}%</p>
               <img class="like-img" src="../paka/Button (4).png" alt="layk">
             </div>
@@ -30,3 +30,4 @@ sliceProductsMain.map((el) => {
             </a>
     `;
 });
+console.log(sliceProductsMain)

@@ -11,11 +11,12 @@ badge.textContent = diCartscart.length
 function showcards(content, data) {
     content.innerHTML = "";
     data.map((el) => {
+      
         content.innerHTML += `
           <div class="cardlar1"> 
                 <input onInput="getCHeck(this, ${el.id})" class="check " type="checkbox">
                 <div class="cardlar-img">
-                    <img class="cardlarimg" src="../paka/image (6).png" alt="">
+                    <img class="cardlarimg" src="${el.images[0]}" alt="${el.name}">
                     <p class="cardlar9">${el.discount}%</p>
                 </div>
              
@@ -35,12 +36,12 @@ function showcards(content, data) {
                         </div>
                         <div class="cardlar3">
                             <div class="cardlar4">
-                                <h1 class="aksiy4-h1">${((el.price * el.discount)  - el.discount )/100*el.qty} ₽</h1>
+                                <h1 class="aksiy4-h1">${((el.price * el.discount)  - el.discount )*el.qty} ₽</h1>
                             </div>
-                            <div class="buttoncard">
-                                <button onClick="decreaseQuatity(${el.id})" class="btncard1">-</button>
-                                <span>${el.qty}</span>
-                                <button onClick="increaseQuatity(${el.id})" class="btncard2">+</button>
+                            <div class="buttoncard1">
+                                <button onClick="decreaseQuatity(${el.id})" class="btncar1">-</button>
+                                <span class="span1">${el.qty}</span>
+                                <button onClick="increaseQuatity(${el.id})" class="btncar2">+</button>
                             </div>
         
                         </div>
